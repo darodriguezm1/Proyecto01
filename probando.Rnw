@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+hola
+
+<<>>=
+a <- c(2,5,-3,10,4,9,19)
+b <- c(-2,-1,11,5,2,7,4)
+c <- c(1,5)
+#creando operaciones
+operaciones <- function(x,y){
+  adicion <- x+y
+  resta <- x-y
+  multiplicacion <- x*y
+  division <- x/y
+  tabla <- data.frame(adicion,resta,multiplicacion,division)
+  print(tabla)
+}
+operaciones(2,5)
+operaciones(a,b)
+@
+
+
+
+\end{document}

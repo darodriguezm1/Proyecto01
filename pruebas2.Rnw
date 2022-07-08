@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage[subfolder, cleanup]{gnuplottex}
+\usepackage{xcolor}
+\definecolor{tbcol}{rgb}{1,1,1}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+hola probando
+
+\begin{gnuplot}[terminal=cairolatex]
+plot sin(x)
+\end{gnuplot}
+
+
+\end{document}

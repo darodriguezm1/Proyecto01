@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\usepackage{Sweave}
+\begin{document}
+\input{probando-concordance}
+hola
+
+\begin{Schunk}
+\begin{Sinput}
+> a <- c(2,5,-3,10,4,9,19)
+> b <- c(-2,-1,11,5,2,7,4)
+> c <- c(1,5)
+> #creando operaciones
+> operaciones <- function(x,y){
++   adicion <- x+y
++   resta <- x-y
++   multiplicacion <- x*y
++   division <- x/y
++   tabla <- data.frame(adicion,resta,multiplicacion,division)
++   print(tabla)
++ }
+> operaciones(2,5)
+\end{Sinput}
+\begin{Soutput}
+  adicion resta multiplicacion division
+1       7    -3             10      0.4
+\end{Soutput}
+\begin{Sinput}
+> operaciones(a,b)
+\end{Sinput}
+\begin{Soutput}
+  adicion resta multiplicacion   division
+1       0     4             -4 -1.0000000
+2       4     6             -5 -5.0000000
+3       8   -14            -33 -0.2727273
+4      15     5             50  2.0000000
+5       6     2              8  2.0000000
+6      16     2             63  1.2857143
+7      23    15             76  4.7500000
+\end{Soutput}
+\end{Schunk}
+
+
+
+\end{document}
